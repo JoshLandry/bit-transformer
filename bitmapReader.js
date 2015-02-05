@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs');
-var bitmap = fs.readFileSync('test.bmp');
+var bitmap = fs.readFileSync('./img/test.bmp');
 
 var bitmapObject = {};
 
@@ -14,6 +14,8 @@ bitmapObject.colorDepth = bitmap.readInt16LE(28);
 bitmapObject.paletteSize = bitmap.readInt32LE(46);
 
 console.dir(bitmapObject);
+
+console.log(bitmap);
 
 console.log(bitmapObject.size);
 console.log(bitmapObject.startOfPixels);
