@@ -19,3 +19,9 @@ console.log(bitmap);
 
 console.log(bitmapObject.size);
 console.log(bitmapObject.startOfPixels);
+
+
+// 54 - 1078
+
+var colorPalette = bitmap.slice(54, 1078);
+console.log(colorPalette);
