@@ -6,9 +6,9 @@ A conversion tool for transforming .bmp files
 
 Author(s)
 ---------
-Rory Sterley (rorysterley@gmail.com)
-Christian Townsdin (Townsdin@gmail.com)
-Daniel Nofziger (dannofziger@gmail.com)
+Rory Sterley (rorysterley@gmail.com)<br>
+Christian Townsdin (Townsdin@gmail.com)<br>
+Daniel Nofziger (dannofziger@gmail.com)<br>
 Joshua Landry (bluemazaro@yahoo.com)
 
 
