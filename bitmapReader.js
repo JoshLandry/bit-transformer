@@ -25,3 +25,17 @@ console.log(bitmapObject.startOfPixels);
 
 var colorPalette = bitmap.slice(54, 1078);
 console.log(colorPalette);
+
+var colorPaletteCopy = colorPalette;
+
+for(var i=0; i<1024; i++) {
+	colorPaletteCopy[i] = colorPaletteCopy[i + 2];
+}
+
+console.log(colorPaletteCopy);
+
+if (colorPalette.length == colorPaletteCopy.length) {
+	console.log('this shit works');
+};
+
+fs.writeFileSync('newbmp.bmp', bitmap);
