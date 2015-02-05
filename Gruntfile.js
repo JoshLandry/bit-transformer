@@ -6,18 +6,18 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-        dev: {
-          options:{
-            node: true,
-            globals: {
-              describe: true,
-              it: true,
-              before: true,
-              after: true
-            }
-          },
-        src: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js', 'index.js']
-        }
+      dev: {
+        options:{
+          node: true,
+          globals: {
+            describe: true,
+            it: true,
+            before: true,
+            after: true
+          }
+        },
+      src: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js', 'index.js']
+      }
     },
     simplemocha: {
       all: {
