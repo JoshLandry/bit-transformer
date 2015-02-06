@@ -16,7 +16,10 @@ module.exports = function(grunt) {
             after: true
           }
         },
-      src: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js', 'index.js']
+      src: ['Gruntfile.js',
+            'lib/**/*.js',
+            'test/**/*.js',
+            'index.js']
       }
     },
     simplemocha: {
