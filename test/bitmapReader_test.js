@@ -7,7 +7,9 @@ var bitmapReader = require('../lib/bitmapReader');
 describe('bitmapReader', function() {
   before(function() {
     // remove ./img/newbmp.bmp if it exists.
-    fs.unlinkSync('./img/newbmp.bmp');
+    try{
+      fs.unlinkSync('./img/newbmp.bmp');
+    } catch(err) {}
   });
 
   it('should', function() {
