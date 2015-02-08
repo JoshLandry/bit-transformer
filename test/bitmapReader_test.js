@@ -19,7 +19,7 @@ describe('bitmapReader', function() {
     } catch(err) {}
   });
 
-  it('should', function() {
+  it('should not equal the original bitmap file.', function() {
     var original = fs.readFileSync('./img/test.bmp');
     bitmapReader();
     var newbmp = fs.readFileSync('./img/newbmp.bmp');
