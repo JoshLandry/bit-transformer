@@ -5,18 +5,12 @@ var expect = require('chai').expect;
 var bitmapReader = require('../lib/bitmapReader');
 
 describe('bitmapReader.invert', function() {
-  before(function() {
-    // remove ./img/newbmp.bmp if it exists.
-    try{
-      fs.unlinkSync('./img/invertedbmp.bmp');
-    } catch(err) {}
+  before(function(){
+    testCleanup('./img/invertedbmp.bmp');
   });
 
-  after(function() {
-    // remove ./img/newbmp.bmp if it exists.
-    try{
-      fs.unlinkSync('./img/invertedbmp.bmp');
-    } catch(err) {}
+  after(function(){
+    testCleanup('./img/invertedbmp.bmp');
   });
 
   it('should not equal the original bitmap file.', function() {
@@ -29,16 +23,12 @@ describe('bitmapReader.invert', function() {
 });
 
 describe("bitmapReader.invert", function() {
-  before(function() {
-    try{
-      fs.unlinkSync('./img/invertedbmp.bmp');
-    } catch(err) {}
+  before(function(){
+    testCleanup('./img/invertedbmp.bmp');
   });
 
-  after(function() {
-    try{
-      fs.unlinkSync('./img/invertedbmp.bmp');
-    } catch(err) {}
+  after(function(){
+    testCleanup('./img/invertedbmp.bmp');
   });
 
   it("should modify the bitmap's color palot", function() {
@@ -53,16 +43,12 @@ describe("bitmapReader.invert", function() {
 });
 
 describe('bitmapReader.random', function() {
-  before(function() {
-    try{
-      fs.unlinkSync('./img/randombmp.bmp');
-    } catch(err) {}
+  before(function(){
+    testCleanup('./img/randombmp.bmp');
   });
 
-  after(function() {
-    try{
-      fs.unlinkSync('./img/randombmp.bmp');
-    } catch(err) {}
+  after(function(){
+    testCleanup('./img/randombmp.bmp');
   });
 
   it('should not equal the original bitmap file.', function() {
@@ -75,16 +61,12 @@ describe('bitmapReader.random', function() {
 });
 
 describe("bitmapReader.random", function() {
-  before(function() {
-    try{
-      fs.unlinkSync('./img/randombmp.bmp');
-    } catch(err) {}
+  before(function(){
+    testCleanup('./img/randombmp.bmp');
   });
 
-  after(function() {
-    try{
-      fs.unlinkSync('./img/randombmp.bmp');
-    } catch(err) {}
+  after(function(){
+    testCleanup('./img/randombmp.bmp');
   });
 
   it("should modify the bitmap's color palot", function() {
@@ -97,3 +79,9 @@ describe("bitmapReader.random", function() {
     expect(originalColorPalette).not.to.eql(newBmpColorPalette);
   });
 });
+
+function testCleanup(dir){
+  try{
+      fs.unlinkSync(dir);
+    } catch(err) {}
+}
