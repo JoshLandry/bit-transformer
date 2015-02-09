@@ -31,7 +31,7 @@ describe("bitmapReader.invert", function() {
     testCleanup('./img/invertedbmp.bmp');
   });
 
-  it("should modify the bitmap's color palot", function() {
+  it("should modify the bitmap's color palette", function() {
     var originalBmp = fs.readFileSync('./img/test.bmp');
     var originalColorPalette = originalBmp.slice(54, 1078);
     bitmapReader.invert();
@@ -69,7 +69,7 @@ describe("bitmapReader.random", function() {
     testCleanup('./img/randombmp.bmp');
   });
 
-  it("should modify the bitmap's color palot", function() {
+  it("should modify the bitmap's color palette", function() {
     var originalBmp = fs.readFileSync('./img/test.bmp');
     var originalColorPalette = originalBmp.slice(54, 1078);
     bitmapReader.random();
