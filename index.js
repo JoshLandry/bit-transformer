@@ -3,7 +3,8 @@
 var bitmapReader = require('./lib/bitmapReader');
 
 var app = function() {
-  bitmapReader();
+  bitmapReader.invert();
+  bitmapReader.random();
 };
 
 app();
